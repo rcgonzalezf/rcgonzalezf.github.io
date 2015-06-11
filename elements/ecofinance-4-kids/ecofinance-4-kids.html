@@ -1,0 +1,72 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="ecofinance-4-kids">
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        h1.paper-font-display1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  <template>
+    <h1 class="paper-font-display1"><span>{{title}}</span></h1>
+    <div class="paper-font-body2">Oct 2012</div>
+    <div class="paper-font-body1">
+      Learning tool to educate kids about saving money and
+      taking care of the environment,
+      this app was the winner of a Startup Weekend on Obregon City.
+      The main goal of this mobile application
+      is to introduce and educate children to the financial world
+      and at the same time we encourage a green way of life.
+      <ul>
+        <template is="dom-repeat" items="{{items}}">
+          <li><span class="paper-font-body1">{{item}}</span></li>
+        </template>
+      </ul>
+    </div>
+    <div class="paper-font-body1">One of our users, testing the app:</div>
+    <img src="/images/assets/ecofinance4Kids.png" alt="EcoFinance4Kids used by kid" class="center-block"/>
+    <div>
+      <ul>
+        <li><span class="paper-font-body1"><a href="http://webadictos.com/2012/10/31/finanzas-para-ninos-swobregon-2012/">Press Note (Spanish)</a></span></li>
+        <li><span class="paper-font-body1"><a href="http://ecofinance4kids-moxi.rhcloud.com/vt/index.html">Base Website</a></span></li>
+      </ul>
+    </div>
+
+
+  </template>
+</dom-module>
+  <script>
+  (function() {
+    Polymer({
+      is: 'ecofinance-4-kids',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'EcoFinance4Kids',
+          notify: true
+        }
+      },
+      ready: function() {
+      this.items = [
+          'I was the only developer on the team so I had to make the API to store the videos, and the Android application.',
+          'This application was more like an html render app. At the beginning I tried to use PhoneGap, but in the end I just grabbed an HTML from the server and used special CSS using the WebView Component.',
+          'I am glad to have been part of the team because of the goal of the project.'
+          ];
+      }
+    });
+    })();
+  </script>
