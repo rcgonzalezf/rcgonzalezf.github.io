@@ -14079,4 +14079,59 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
     });
     })();
   </script>
+<dom-module id="ubica-mi-nave" assetpath="ubica-mi-nave/">
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        h1.paper-font-display1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  <template>
+    <h1 class="paper-font-display1"><span>{{title}}</span></h1>
+    <div class="paper-font-body2">Aug 2010</div>
+    <div class="paper-font-body1">
+      Car GPS position software. Using geolocalization API,
+      it saved your car’s last location and showed you a
+      picture of it using Augmented Realty.
+      This project was conceived during a SuperHappyDevHouse event.
+      We decided to continue the development after the event and we formed a
+      small team, a designer, a product manager and me as a developer.
+      <ul>
+        <template is="dom-repeat" items="{{items}}">
+          <li><span class="paper-font-body1">{{item}}</span></li>
+        </template>
+      </ul>
+    </div>
+    <img src="/images/assets/UbicaMiNaveScreenshot.png" alt="Ubica Mi Nave screenshot" class="center-block">
+
+  </template>
+</dom-module>
+  <script>
+  (function() {
+    Polymer({
+      is: 'ubica-mi-nave',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'Ubica mi nave (~ Find my car)',
+          notify: true
+        }
+      },
+      ready: function() {
+      this.items = [
+          'Using the Google Maps API.',
+          'Using SQLite as a mechanism for internal storage.',
+          'Using the camera to create an image overlapped to simulate the actual position of your car.',
+          'We didn’t publish this app because they were a lot of similar apps in the store.'
+          ];
+      }
+    });
+    })();
+  </script>
 </div></body></html>
