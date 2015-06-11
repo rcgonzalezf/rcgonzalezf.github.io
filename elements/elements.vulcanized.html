@@ -14059,7 +14059,7 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
       With this template I was able to start teaching people in Android.
       <br>
       You can see the base code, that I no longer mantain here:
-      <a href="https://github.com/moxi/QueOndas"> Que Ondas, github</a>
+      <a href="https://github.com/moxi/QueOndas">Que Ondas, github</a>
     </div>
 
   </template>
@@ -14072,7 +14072,7 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
       properties: {
         greeting: {
           type: String,
-          value: 'Other Experience:',
+          value: 'Other Experience (Android related):',
           notify: true
         }
       }
@@ -14380,6 +14380,66 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
           'It has the support to read your contacts, sort them and show you only those that have the app installed',
           'Custom components; Android doesn’t have a Date and Time component so I made one merging the two native components and handling the input with a custom component. Also I made a clickable TextView for this app that supports readonly mode and editing mode, at the end I replaced that in two components the clickable one and the write/readonly as another component in order to keep the code simpler.',
           'It supports offline mode using SQLite as a database'
+          ];
+      }
+    });
+    })();
+  </script>
+<dom-module id="empresa-movil" assetpath="empresa-movil/">
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        h1.paper-font-display1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  <template>
+    <h1 class="paper-font-display1"><span>{{title}}</span></h1>
+    <div class="paper-font-body2">May 2013 – Aug 2013</div>
+    <div class="paper-font-body1">
+      This is a successful startup that it is covering the need of up to date
+      sales information in traditional companies.
+      It follow a model of enterprise subscription service.
+      <ul>
+        <template is="dom-repeat" items="{{items}}">
+          <li><span class="paper-font-body1">{{item}}</span></li>
+        </template>
+      </ul>
+    </div>
+    <img src="/images/assets/EmpresaMovilV1.png" alt="Empresa Movil screenshot" class="center-block">
+    <div>
+      <ul>
+        <li><span class="paper-font-body1"><a href="https://play.google.com/store/apps/details?id=com.explosionmovil.empresamovil">Play Store link</a></span></li>
+      </ul>
+    </div>
+  </template>
+</dom-module>
+  <script>
+  (function() {
+    Polymer({
+      is: 'empresa-movil',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'Empresa Movil (Mobile Company)',
+          notify: true
+        }
+      },
+      ready: function() {
+      this.items = [
+          'Development of the Android app.',
+          'In order to use the app, the user needs to have an specific token using a send SMS and this has to be previously registered on the backend server',
+          'All the fragment activities are built dynamically with custom widgets specified by the server',
+          'At some specific time the app makes an update to their information (Http polling)',
+          'It supports internationalization and offline mode',
+          'Validation of the phone numbers and their country',
+          'Proguard, Rubotium script for Automation Testing',
+          'Consuming WCF/JSON services. Using Git as a DCVS'
           ];
       }
     });
