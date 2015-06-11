@@ -11,37 +11,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <style is="custom-style">
 
 /*
- Polymer includes a shim for CSS Custom Properties that we can
- use for application theming. Below, you'll find the default
- palette for the Polymer Starter Kit layout. Feel free to play
- with changing the colors used or generate your own palette of
- colours at MaterialPalette.com.
+ Polymer includes a shim for CSS Custom Properties that we can use for application theming.
+ Below, you'll find the default palette for the Polymer Starter Kit layout. Feel free to play
+ with changing the colors used or generate your own palette of colours at MaterialPalette.com.
+
+ See https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
+ for further information on custom CSS properties.
  */
 
 /* Application theme */
 
 :root {
-    --dark-primary-color: #303F9F;
-    --default-primary-color:#3F51B5;
-    --light-primary-color: #C5CAE9;
-    --text-primary-color: #ffffff; /*text/icons*/
-    --accent-color: #FF4081;
-    --primary-background-color: #c5cae9;
-    --primary-text-color: #212121;
-    --secondary-text-color: #727272;
-    --disabled-text-color: #bdbdbd;
-    --divider-color: #B6B6B6;
+  --dark-primary-color: #303F9F;
+  --default-primary-color:#3F51B5;
+  --light-primary-color: #C5CAE9;
+  --text-primary-color: #ffffff; /*text/icons*/
+  --accent-color: #FF4081;
+  --primary-background-color: #c5cae9;
+  --primary-text-color: #212121;
+  --secondary-text-color: #727272;
+  --disabled-text-color: #bdbdbd;
+  --divider-color: #B6B6B6;
 
-    /* Components */
+  /* Components */
 
-    /* paper-drawer-panel */
-    --drawer-menu-color: #ffffff;
-    --drawer-border-color: 1px solid #ccc;
-    --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
+  /* paper-drawer-panel */
+  --drawer-menu-color: #ffffff;
+  --drawer-border-color: 1px solid #ccc;
+  --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
 
     /* paper-menu */
-    --paper-menu-background-color: #fff;
-    --menu-link-color: #111111;
+  --paper-menu-background-color: #fff;
+  --menu-link-color: #111111;
 }
 
 /* General styles */
@@ -71,8 +72,8 @@ paper-menu iron-icon {
 }
 
 #mainToolbar .bottom {
-  padding-bottom: 100px;
-  padding-left: 30px;
+  padding-bottom: 120px;
+  margin-left: 30px;
 }
 
 paper-menu a {
@@ -132,8 +133,9 @@ paper-menu a {
 
   paper-material {
     --menu-container-display: none;
-    width: calc(97.33% - 16px);
+    width: calc(97.33% - 32px);
     padding-left: 16px;
+    padding-right: 16px;
   }
 
   #drawer .paper-toolbar {
@@ -149,7 +151,7 @@ paper-menu a {
   }
 
   #mainToolbar .bottom {
-    padding-left: 50px;
+    margin-left: 50px;
     padding-bottom: 24px;
   }
 
@@ -166,9 +168,17 @@ paper-menu a {
 @media (min-width: 601px) {
 
   paper-material {
-    width: calc(98% - 16px);
+    width: calc(98% - 46px);
     padding-left: 30px;
+    padding-right: 30px;
   }
+
+    #mainToolbar.has-shadow .bottom {
+        margin-left: 50px;
+        padding-bottom: 0;
+        padding-left: 0;
+        font-size: 24px;
+    }
 
 }
 
@@ -198,19 +208,19 @@ paper-menu a {
 /* tablet-large */
 @media all and (min-width: 601px) and (max-width: 840px) and (orientation : portrait) { }
 /* desktop-x-small-landscape */
-@media all and (min-width: 0px) and (max-width: 480px) and (min-aspect-ratio: 4/3) { }
+@media all and (min-width: 0px) and (max-width: 480px) and (orientation: landscape) { }
 /* desktop-x-small */
 @media all and (min-width: 0px) and (max-width: 480px) and (max-aspect-ratio: 4/3) { }
 /* desktop-small-landscape */
-@media all and (min-width: 481px) and (max-width: 840px) and (min-aspect-ratio: 4/3) { }
+@media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) { }
 /* desktop-small */
 @media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) { }
 /* desktop-medium-landscape */
-@media all and (min-width: 841px) and (max-width: 1280px) and (min-aspect-ratio: 4/3) { }
+@media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) { }
 /* desktop-medium */
 @media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) { }
 /* desktop-large */
 @media all and (min-width: 1281px) and (max-width: 1600px) { }
 /* desktop-xlarge */
-@media all and (min-width: 1601px) and (min-width: 1920px) { }
+@media all and (min-width: 1601px) and (max-width: 1920px) { }
 </style>

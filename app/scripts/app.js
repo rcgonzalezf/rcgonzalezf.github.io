@@ -21,7 +21,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   // Listen for template bound event to know when bindings
   // have resolved and content has been stamped to the page
-  app.addEventListener('template-bound', function() {
+  app.addEventListener('dom-change', function() {
     console.log('Our app is ready to rock!');
   });
 
@@ -33,6 +33,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var drawerPanel = document.querySelector('#paperDrawerPanel');
     drawerPanel.forceNarrow = true;
   });
+
+  // Close drawer after menu item is selected if drawerPanel is narrow
+  app.onMenuSelect = function() {
+    var drawerPanel = document.querySelector('#paperDrawerPanel');
+    if (drawerPanel.narrow) {
+      drawerPanel.closeDrawer();
+    }
+  };
 
 })(document);
 
