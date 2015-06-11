@@ -14261,4 +14261,69 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
     });
     })();
   </script>
+<dom-module id="dreamlist-app" assetpath="dreamlist-app/">
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        h1.paper-font-display1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  <template>
+    <h1 class="paper-font-display1"><span>{{title}}</span></h1>
+    <div class="paper-font-body2">Nov 2012</div>
+    <div class="paper-font-body1">
+      This is a list of dreams.  You state your dream and it is set as a goal.
+      You can share your dream, and split it into steps in order to achieve your goal.
+       The app records your voice and, using Google Voice API,
+       it sends what you dream of the API.
+       The API answers with some services or suggestions
+       to help you make your dream come true.
+      <ul>
+        <template is="dom-repeat" items="{{items}}">
+          <li><span class="paper-font-body1">{{item}}</span></li>
+        </template>
+      </ul>
+      <style>
+      .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+      </style>
+      <div class="embed-container"><iframe src="https://www.youtube.com/embed/gj5cgk1PNeE" frameborder="0" allowfullscreen=""></iframe></div>
+      <div class="paper-font-body1">
+        Here it is a news post of the app: <a href="http://www.firstpost.com/topic/product/android-dreamlist-dream-list-fulfill-video-gj5cgk1PNeE-53093-1.html">News link</a>.
+        Basically it's just the embedded video.
+      </div>
+
+    </div>
+
+  </template>
+</dom-module>
+  <script>
+  (function() {
+    Polymer({
+      is: 'dreamlist-app',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'Dreamlist',
+          notify: true
+        }
+      },
+      ready: function() {
+      this.items = [
+          'I was doing the Android part and the backend API services. The platform I was using is OpenShift from Redhat.'+
+          'The REST services were made using servlets and using MongoDB to persist the data.'+
+          'For the Android part we used the Google Voice recognition API.',
+          'We were planning to publish the dreams to Twitter and Facebook and use SocialNetworks to share dreams.',
+          'It supports offline operations, the Google Voice to text if it was offline it allowed you to type your dream.',
+          'This app was never published on the App Stores because there was another app with the same name and the Startup decide to focus their efforts on a different product.'
+          ];
+      }
+    });
+    })();
+  </script>
 </div></body></html>
