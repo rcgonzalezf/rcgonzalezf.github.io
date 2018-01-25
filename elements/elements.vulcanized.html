@@ -14540,4 +14540,67 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
     });
     })();
   </script>
+  <dom-module id="go-box" assetpath="go-box/">
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        h1.paper-font-display1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  <template>
+    <h1 class="paper-font-display1"><span>{{title}}</span></h1>
+    <div class="paper-font-body2">Oct 2017 – Present</div>
+    <div class="paper-font-body1">
+      Android application written in Kotlin
+      This application is in progress and soon will be ready for Beta testing. (Feb 2018)
+      <ul>
+        <template is="dom-repeat" items="{{items}}">
+          <li><span class="paper-font-body1">{{item}}</span></li>
+        </template>
+      </ul>
+    </div>
+    <img src="/images/assets/go-box-screenshot.png" width="100px" alt="GO Box screenshot" class="center-block">
+  
+    <div>
+      <ul>
+        <li>
+          <span class="paper-font-body1">
+          <a href="https://play.google.com/store/apps/details?id=com.rubennic.gobox">
+            Previous version in Google Play (not the one I'm working on) - GO Box
+          </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </template>
+</dom-module>
+  <script>
+  (function() {
+    Polymer({
+      is: 'go-box',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'GO Box',
+          notify: true
+        }
+      },
+      ready: function() {
+      this.items = [
+        'Updating the application from scratch, providing improvements based on the Android platform. ',
+        'This is not a full time job position. ',
+        'I started to work directly with the owner of this company mainly as a contribution to the environment, ' +
+        'because I believe is a great project with a positive impact to the community '+
+        'with the added benefit to keep me up to date on new technology.'
+        ];
+      }
+    });
+    })();
+  </script>
 </div></body></html>
