@@ -12,7 +12,7 @@
     "elements/no-problema/no-problema.html",
     "elements/other-experience/other-experience.html",
     "elements/routing.html",
-    "elements/ebay/ebay.html",
+    "elements/ebay-core/ebay-core.html",
     "elements/go-box/go-box.html",
     "elements/ubica-mi-nave/ubica-mi-nave.html",
     "scripts/app.js",

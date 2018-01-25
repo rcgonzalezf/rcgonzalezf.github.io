@@ -14459,7 +14459,7 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
     </style>
   <template>
     <h1 class="paper-font-display1"><span>{{title}}</span></h1>
-    <div class="paper-font-body2">May 2014 – Present</div>
+    <div class="paper-font-body2">May 2014 – Nov 2015</div>
     <div class="paper-font-body1">
       Working as an on-site consultant doing feature development and maintenance for the eBay global
       family of classifieds apps.
@@ -14599,6 +14599,65 @@ iron-selector:not(.narrow-layout) #main ::content [paper-drawer-toggle] {
         'because I believe is a great project with a positive impact to the community '+
         'with the added benefit to keep me up to date on new technology.'
         ];
+      }
+    });
+    })();
+  </script>
+  <dom-module id="ebay-core" assetpath="ebay-core/">
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        h1.paper-font-display1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  <template>
+    <h1 class="paper-font-display1"><span>{{title}}</span></h1>
+    <div class="paper-font-body2">Nov 2015 – Present</div>
+    <div class="paper-font-body1">
+      Working as staff Android engineer.
+      I contributed on areas like Search, Settings, Sign In, Messages and some other
+      features. This is by far the most complex Android application that I've been part.
+        <template is="dom-repeat" items="{{items}}">
+          <li><span class="paper-font-body1">{{item}}</span></li>
+        </template>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <span class="paper-font-body1">
+          <a href="https://play.google.com/store/apps/details?id=com.ebay.mobile">
+            eBay Android App
+          </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </template>
+</dom-module>
+  <script>
+  (function() {
+    Polymer({
+      is: 'ebay-core',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'eBay',
+          notify: true
+        }
+      },
+      ready: function() {
+      this.items = [
+          'Implementing desings, working on new features, for different domains like Search, Customer Connection.', 
+          'Part of the Kotlin working group, and always trying to contribute with new ideas or flows in an ordered way.',
+          'Helped with UI Automation as well and a bunch of Unit Tests :).'
+          ];
       }
     });
     })();
