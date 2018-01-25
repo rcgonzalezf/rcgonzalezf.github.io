@@ -1,1 +1,24 @@
-["elements/app-theme.html","elements/banking-app/banking-app.html","elements/bootstrap/sw-toolbox-setup.js","elements/dreamlist-app/dreamlist-app.html","elements/ebay-classifieds/ebay-classifieds.html","elements/ecofinance-4-kids/ecofinance-4-kids.html","elements/elements.html","elements/elements.vulcanized.html","elements/empresa-movil/empresa-movil.html","elements/my-list/my-list.html","elements/no-problema/no-problema.html","elements/other-experience/other-experience.html","elements/routing.html","elements/ubica-mi-nave/ubica-mi-nave.html","scripts/app.js","styles/main.css","styles/x-was-dark-main.css","index.html","./","bower_components/webcomponentsjs/webcomponents.min.js"]
+[
+    "elements/app-theme.html",
+    "elements/banking-app/banking-app.html",
+    "elements/bootstrap/sw-toolbox-setup.js",
+    "elements/dreamlist-app/dreamlist-app.html",
+    "elements/ebay-classifieds/ebay-classifieds.html",
+    "elements/ecofinance-4-kids/ecofinance-4-kids.html",
+    "elements/elements.html",
+    "elements/elements.vulcanized.html",
+    "elements/empresa-movil/empresa-movil.html",
+    "elements/my-list/my-list.html",
+    "elements/no-problema/no-problema.html",
+    "elements/other-experience/other-experience.html",
+    "elements/ebay/ebay.html",
+    "elements/go-box/go-box.html",
+    "elements/routing.html",
+    "elements/ubica-mi-nave/ubica-mi-nave.html",
+    "scripts/app.js",
+    "styles/main.css",
+    "styles/x-was-dark-main.css",
+    "index.html",
+    "./",
+    "bower_components/webcomponentsjs/webcomponents.min.js"
+]
