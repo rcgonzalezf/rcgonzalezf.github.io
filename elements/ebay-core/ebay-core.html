@@ -1,0 +1,69 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="ebay">
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        h1.paper-font-display1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  <template>
+    <h1 class="paper-font-display1"><span>{{title}}</span></h1>
+    <div class="paper-font-body2">Nov 2015 – Present</div>
+    <div class="paper-font-body1">
+      Working as staff Android engineer.
+      I contributed on areas like Search, Settings, Sign In, Messages and some other
+      features. This is by far the most complex Android application that I've been part.
+        <template is="dom-repeat" items="{{items}}">
+          <li><span class="paper-font-body1">{{item}}</span></li>
+        </template>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <span class="paper-font-body1">
+          <a href="https://play.google.com/store/apps/details?id=com.ebay.mobile">
+            eBay Android App
+          </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </template>
+</dom-module>
+  <script>
+  (function() {
+    Polymer({
+      is: 'ebay',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'eBay',
+          notify: true
+        }
+      },
+      ready: function() {
+      this.items = [
+          'Implementing desings, working on new features, for different domains like Search, Customer Connection.', 
+          'Part of the Kotlin working group, and always trying to contribute with new ideas or flows in an ordered way.',
+          'Helped with UI Automation as well and a bunch of Unit Tests :).'
+          ];
+      }
+    });
+    })();
+  </script>
