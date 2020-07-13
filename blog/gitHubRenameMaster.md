@@ -35,6 +35,9 @@ $git push origin --delete master
 
 Easy right?
 
+### Known issues
+- GitHub pages only work with `master` branch.
+
 ## References
 - Linuxize. (2020, February 18). *How To Rename a Local and Remote Git Branch*. Retrieved from https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/.
 - Wouter, J. (2012, December 26). *Deleting remote master branch, refused due to being current branch, answer*. Retrieved from https://stackoverflow.com/a/14041409/799162. 
